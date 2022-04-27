@@ -1,9 +1,11 @@
-name: GitHub Actions Demo
-on: [pull_request,push]
+name: Check License Lines
+on:
+  push:
+    branches: [master]
 jobs:
-  license-check:
+  check-license-lines:
     runs-on: ubuntu-latest
-    name: License Check
     steps:
-      - uses: actions/checkout@v2
-      - uses: yusufpapurcu/go-license-checker@v0.5
+    - uses: actions/checkout@master
+    - name: Check License Lines
+      uses: kt3k/license_checker@v1.0.6
