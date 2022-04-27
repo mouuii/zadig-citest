@@ -1,4 +1,0 @@
-{
-    "**/*.{go}": "Copyright 2021 The KodeRover Authors.",
-    "ignore": ["testdata", "npm"]
-}
